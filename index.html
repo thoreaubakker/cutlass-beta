@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cutlass beta · Krinjah</title>
+<meta name="description" content="Cutlass by Krinjah: free beta for Mac and Windows. Drop in a break, Cutlass chops it and plays it like a jungle drummer.">
+<meta name="robots" content="noindex">
+<style>
+  :root {
+    --beige: #e9e2d0;
+    --panel: #f5f1e6;
+    --ink: #2b2620;
+    --muted: #6b6255;
+    --line: #cfc6b0;
+    --screen: #1f3320;
+    --screen-ink: #9fe07a;
+    --red: #c0392b;
+    --green: #2f4a2a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--beige);
+    color: var(--ink);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  .brand { letter-spacing: .25em; font-weight: 700; font-size: 13px; color: var(--muted); }
+  h1 { font-size: 40px; line-height: 1.1; margin: 8px 0 12px; }
+  h2 { font-size: 22px; margin: 40px 0 12px; }
+  h3 { font-size: 18px; margin: 20px 0 8px; }
+  p { margin: 0 0 12px; }
+  .lead { font-size: 19px; }
+  .badge { display: inline-block; background: var(--screen); color: var(--screen-ink); font: 600 13px/1 ui-monospace, Menlo, Consolas, monospace; padding: 6px 10px; border-radius: 4px; }
+  .downloads { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0 8px; }
+  .btn { display: block; text-align: center; text-decoration: none; background: var(--green); color: #fff; font-weight: 700; padding: 16px 12px; border-radius: 8px; border-bottom: 4px solid #1b2c18; }
+  .btn small { display: block; font-weight: 400; opacity: .85; font-size: 13px; margin-top: 2px; }
+  .btn:active { transform: translateY(2px); border-bottom-width: 2px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px 20px; margin: 12px 0; }
+  .note { border-left: 4px solid var(--red); }
+  .safe { background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--green); border-radius: 8px; padding: 12px 16px; margin: 8px 0 0; font-weight: 600; }
+  .shot { margin: 24px 0 0; }
+  .shot img { display: block; width: 100%; border: 1px solid var(--line); box-shadow: 0 6px 20px rgba(43,38,32,.18); }
+  .steps b { white-space: nowrap; }
+  ol, ul { padding-left: 22px; margin: 0 0 12px; }
+  li { margin: 4px 0; }
+  code, kbd { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 14px; background: #fff; border: 1px solid var(--line); border-radius: 4px; padding: 1px 5px; }
+  a { color: var(--green); }
+  .small { font-size: 14px; color: var(--muted); }
+  .video { position: relative; padding-top: 56.25%; background: var(--screen); border-radius: 10px; overflow: hidden; }
+  .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  footer { margin-top: 48px; font-size: 14px; color: var(--muted); }
+  img { max-width: 100%; height: auto; border-radius: 8px; }
+  @media (max-width: 520px) {
+    h1 { font-size: 32px; }
+    .downloads { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <div class="brand">KRINJAH</div>
+  <h1>Cutlass beta</h1>
+  <p class="lead">Drop in a break. Cutlass chops it, picks a kit, and plays it like a jungle drummer, with fills, layers, CHAOS and drag-out to MIDI or audio.</p>
+  <p><span class="badge">Latest: 0.20.0 · Mac + Windows · VST3 / AU / Standalone</span></p>
+
+  <div class="downloads">
+    <a class="btn" href="https://github.com/thoreaubakker/cutlass-beta/releases/download/v0.20.0/Cutlass-0.20.0-Windows-Setup.exe">Download for Windows<small>Windows 10 or 11 · Setup.exe</small></a>
+    <a class="btn" href="https://github.com/thoreaubakker/cutlass-beta/releases/download/v0.20.0/Cutlass-0.20.0-Mac.pkg">Download for Mac<small>macOS 10.15 or newer · Intel + Apple chip · .pkg</small></a>
+  </div>
+  <p class="safe">Only download Cutlass from this page. I'll never send it any other way. If you got it somewhere else, delete it.</p>
+  <p class="shot"><img src="cutlass-0.20.png" alt="Cutlass plugin: break waveform at the top, kick, snare, rim and hat pads in the middle, CHAOS pattern grid below" loading="lazy"></p>
+
+  <h2>Before you install</h2>
+  <div class="card">
+    <ul>
+      <li><b>It's a beta.</b> Save your projects, and bounce anything you love to audio.</li>
+      <li><b>No internet, no data.</b> Cutlass never goes online and collects nothing.</li>
+      <li><b>The deal:</b> the beta is free. Cutlass 1.0 will be paid, and everyone who sends feedback during the beta gets 1.0 free.</li>
+    </ul>
+  </div>
+
+  <h2>Install on Windows</h2>
+  <ol>
+    <li>Close your music program.</li>
+    <li>Double-click <code>Cutlass-…-Windows-Setup.exe</code> and click Next until it finishes.</li>
+    <li>Open your music program. If Cutlass doesn't show up, rescan plugins (Ableton: Preferences → Plug-ins → Rescan).</li>
+  </ol>
+  
+  <div class="card note">
+    <h3>Windows may show a blue "Windows protected your PC" box</h3>
+    <p>That's expected, and it's safe to continue. Windows shows this box for any new app it hasn't seen many people download yet. It doesn't mean anything is wrong with the file.</p>
+    <p class="steps">To install, click <b>More info</b>, then <b>Run anyway</b>.</p>
+    
+    <p>Your browser may also say the file "isn't commonly downloaded". Same reason. Choose <b>Keep</b> (in Edge: the <b>…</b> menu next to the download, then <b>Keep</b>, then <b>Keep anyway</b>).</p>
+    <p>Getting Cutlass officially signed by Microsoft takes time, and it's coming before the full release.</p>
+    <p>Want to double-check? You can upload the installer to <a href="https://www.virustotal.com/">VirusTotal</a>, a free site that checks a file with about 70 antivirus programs.</p>
+  </div>
+
+  <h2>Install on Mac</h2>
+  <ol>
+    <li>Close your music program.</li>
+    <li>Double-click <code>Cutlass-…-Mac.pkg</code> and click Continue until it finishes. It asks for your Mac password, then installs the AU, the VST3 and the Cutlass app.</li>
+    <li>Open your music program. Logic and GarageBand find it under Audio Units → Krinjah.</li>
+  </ol>
+  
+  <p class="small">Mac builds are signed and checked by Apple, so they open with no warning. The first time you use DRAG AUDIO or SAVE BUG REPORT, your Mac may ask whether your music program can use your Documents or Desktop folder. That's where Cutlass saves those files, so click OK.</p>
+
+  <h2>Your first minute</h2>
+  <ol>
+    <li>Put Cutlass on a MIDI (instrument) track.</li>
+    <li>Drag a break onto the green screen. Any break you own works. The &lt; &gt; arrows step through its folder.</li>
+    <li>Pick a pattern, press play in your music program.</li>
+    <li>Turn on <b>FILLS</b>, or try <b>CHAOS</b> and its <b>RISK</b> knob.</li>
+    <li>Drag out the result with <b>DRAG MIDI</b> or <b>DRAG AUDIO</b>.</li>
+  </ol>
+
+  <h2>Send me a note</h2>
+  <div class="card">
+    <p><b>My one ask:</b> make one tune with Cutlass, then tell me how it went. About 20 minutes, no pressure.</p>
+    <p><a class="btn" style="display:inline-block;padding:12px 20px" href="mailto:hello@krinjah.com?subject=Cutlass%20beta%20notes&body=Windows%20or%20Mac%3A%0AMusic%20program%3A%0AWhat%20I%20loved%3A%0AWhat%20was%20confusing%20or%20broke%3A%0A">Send me your notes</a></p>
+    <p>The button opens an email to <b>hello@krinjah.com</b> (or write to that address yourself). Say Windows or Mac, which music program, what you loved, and what was confusing or broke.</p>
+    <p><b>If Cutlass crashed or sounded wrong,</b> just tell me what you were doing when it happened. That's the most useful part.</p>
+    <p class="small">Up for one extra step? In Cutlass, open the help (?) and press <b>SAVE BUG REPORT</b>. It makes a small folder with your break and your settings (file names only, never where they live on your computer): zip it and attach it to your email. I only use your break to find the bug, and delete it once it's fixed. I read everything once a week and post what changed below.</p>
+  </div>
+
+  <h2>Known issues</h2>
+  <ul>
+    <li>On some breaks a kick or snare gets cut in two. Try the SENSITIVITY knob or EDIT CUTS.</li>
+    <li>On a few breaks the kit finds no hat or rim at low SENSITIVITY. Turn it up a little.</li>
+    <li>Tested in Ableton. FL Studio, Logic, Cubase, Bitwig and others are new territory: tell me how it goes.</li>
+    <li>CHAOS is brand new. Tell me which spins sound great and which don't.</li>
+  </ul>
+
+  <h2>What's next</h2>
+  <div class="card">
+    <p><b>First update: Wednesday, Nov 11</b>, shaped by your notes. Each update gets a short "You said / I changed / Not yet, and why" right here.</p>
+    <p><b>Being worked on</b> (no dates yet): layered breaks (a second break under the first), easier pattern editing, a CRASH pad, more patterns, and time-stretch. Tell me what you'd want next in your notes.</p>
+  </div>
+
+  <h2>Thanks</h2>
+  <p>Cutlass stands on 30 years of jungle: the drummers on the original breaks, and the producers and tool makers who've taught this craft for years. If Cutlass helps you, go learn from them too.</p>
+  <p>How it was made: I designed and tested it, Claude (an AI) helped write the code, and I'm responsible for it.</p>
+
+  <h2>Uninstall</h2>
+  <ul>
+    <li><b>Windows:</b> Settings → Apps → "Cutlass" (publisher Krinjah) → Uninstall.</li>
+    <li><b>Mac:</b> drag these three to the Trash: <code>/Library/Audio/Plug-Ins/Components/Cutlass.component</code>, <code>/Library/Audio/Plug-Ins/VST3/Cutlass.vst3</code> and <code>/Applications/Cutlass.app</code>.</li>
+  </ul>
+  <p class="small">Uninstalling never touches your saved projects. Tried an earlier test build on Mac by hand? Also delete the copies in your own <code>~/Library/Audio/Plug-Ins/</code> folders, so you don't get two Cutlasses.</p>
+
+  <footer>
+    Cutlass by Krinjah · beta · questions: <a href="mailto:hello@krinjah.com">hello@krinjah.com</a> · not on the list yet? <a href="https://krinjah.kit.com/d3552addfa">Sign up</a>
+    <br>VST is a registered trademark of Steinberg Media Technologies GmbH.
+  </footer>
+</main>
+</body>
+</html>
