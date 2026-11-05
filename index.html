@@ -42,7 +42,9 @@
   .safe { background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--green); border-radius: 8px; padding: 12px 16px; margin: 8px 0 0; font-weight: 600; }
   .shot { margin: 24px 0 0; }
   .shot img { display: block; width: 100%; border: 1px solid var(--line); box-shadow: 0 6px 20px rgba(43,38,32,.18); }
-  .steps b { white-space: nowrap; }
+  .steps b { white-space: normal; }
+  ol.steps li { margin: 10px 0; }
+  .step-img { display: block; max-width: 340px; width: 100%; margin: 8px 0 4px; border: 1px solid var(--line); }
   ol, ul { padding-left: 22px; margin: 0 0 12px; }
   li { margin: 4px 0; }
   code, kbd { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 14px; background: #fff; border: 1px solid var(--line); border-radius: 4px; padding: 1px 5px; }
@@ -91,11 +93,16 @@
   </ol>
   
   <div class="card note">
-    <h3>Windows may show a blue "Windows protected your PC" box</h3>
-    <p>That's expected, and it's safe to continue. Windows shows this box for any new app it hasn't seen many people download yet. It doesn't mean anything is wrong with the file.</p>
-    <p class="steps">To install, click <b>More info</b>, then <b>Run anyway</b>.</p>
-    
-    <p>Your browser may also say the file "isn't commonly downloaded". Same reason. Choose <b>Keep</b> (in Edge: the <b>…</b> menu next to the download, then <b>Keep</b>, then <b>Keep anyway</b>).</p>
+    <h3>Windows will ask "are you sure?" a few times</h3>
+    <p>That's expected, and it's safe to continue. Windows and your browser double-check any new app that not many people have downloaded yet. It doesn't mean anything is wrong with the file. <b>Expect three or four quick "are you sure?" steps:</b></p>
+    <ol class="steps">
+      <li><b>Your browser says the file "isn't commonly downloaded".</b> In Edge, hover over the download, click the <b>…</b> and choose <b>Keep</b>. In Chrome, click <b>Keep</b>.
+        <img class="step-img" src="win-keep-1.png" alt="Edge download list: Cutlass-0.20.0-Windows-Setup.exe isn't commonly downloaded" loading="lazy"></li>
+      <li><b>Edge asks you to "Make sure you trust" it.</b> Click the small arrow next to <b>Delete</b>, then <b>Keep anyway</b>.
+        <img class="step-img" src="win-keep-2.png" alt="Edge box: Make sure you trust Cutlass-0.20.0-Windows-Setup.exe, with Cancel and Delete buttons" loading="lazy"></li>
+      <li><b>A blue "Windows protected your PC" box</b> when you open the installer: click <b>More info</b>, then <b>Run anyway</b>.</li>
+      <li><b>"Do you want to allow this app to make changes?"</b> Click <b>Yes</b>. The installer needs this to put the plugin in your VST3 folder.</li>
+    </ol>
     <h3>Why the warnings, honestly</h3>
     <p>Apps are "signed" to prove who made them. The <b>Mac version is already signed and approved by Apple.</b> Windows signing takes an ID check and time, so the beta isn't signed yet. <b>Signed Windows builds are coming with the full release.</b></p>
     <p>If you run the Windows installer through a virus scanner, here's what to expect. I checked this exact file with <a href="https://www.virustotal.com/" target="_blank" rel="noopener">VirusTotal</a>, a free site that checks a file with about 70 antivirus programs: <b>Microsoft Defender (built into Windows), Bitdefender, Avast, AVG, McAfee and the other big names find nothing.</b> Two small scanners out of 71 call it "obfuscated", because the installer is compressed and brand new. That's a common false alarm for new, unsigned installers, and it goes away with signing and time. <a href="https://www.virustotal.com/gui/file/2f3ae0e35c5b7ea0d55cd688561c4704bca69d3dfd31023a57e940634ff1c103" target="_blank" rel="noopener">See the full report</a>.</p>
